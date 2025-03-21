@@ -1,5 +1,7 @@
 ## VNC Installation Steps
 
+![ubuntu_vnc_viewer](https://github.com/tejasdurge55/devops_mini_projects/blob/master/gui_installation_on_ubuntu/2025-03-21_10h24_38.png)
+
 Create an ubuntu vm on aws with min 2vcpu having vnc port 5901 and ssh port 22 open in security group and insert the below commands:
 ```
 sudo apt update
@@ -52,6 +54,8 @@ right click ok the screen and change desktop appearance from black to other colo
 
 
 ## RDP Installation Steps
+
+![ubuntu_rdp](https://github.com/tejasdurge55/devops_mini_projects/blob/master/gui_installation_on_ubuntu/2025-03-21_10h52_32.png)
 
 Create an ubuntu vm on aws with minimum 2vcpu having rdp port 3389 and ssh port 22 open in security group and insert the below commands:
 ```

@@ -49,3 +49,40 @@ open you vnc software and enter: `<aws-instace-public-ip>:1`
 enter your password and you will be connected to the gui
 
 right click ok the screen and change desktop appearance from black to other color for better visiblility
+
+
+## RDP Installation Steps
+
+Create an ubuntu vm on aws with minimum 2vcpu having rdp port 3389 and ssh port 22 open in security group and insert the below commands:
+```
+sudo apt update
+sudo apt install ubuntu-desktop
+sudo apt install xrdp 
+sudo systemctl status xrdp 
+sudo adduser xrdp ssl-cert 
+```
+
+after the installation of ubuntu-desktop package, its possible that the further packages wont get installed
+
+so we need to change nameserver
+```
+sudo vi /etc/resolv.conf
+```
+
+add namesever:
+```
+nameserver 8.8.8.8
+```
+
+again run the below commands, enter a password for root user, we require the password for logging in to rdp:
+```
+sudo su
+sudo passwd
+sudo apt install xrdp 
+sudo systemctl status xrdp 
+sudo adduser xrdp ssl-cert 
+```
+
+open the rdp client and type the instance ip and click on connect.
+
+Then enter root and its password, you will be able to see the gui after logging in.
